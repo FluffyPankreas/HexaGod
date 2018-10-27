@@ -22,6 +22,7 @@ namespace Managers
                 {
                     GameObject newManager = new GameObject();
                     newManager.AddComponent<LevelManager>();
+                    newManager.name = "LevelManager";
 
                     _instance = newManager.GetComponent<LevelManager>();
                 }
