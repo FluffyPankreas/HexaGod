@@ -27,7 +27,7 @@ namespace Temporary
             newTile = Instantiate(_hexPrefab);
             newTile.Position = Vector3Int.zero + new Vector3Int(1, 0, 0);
             
-            LevelManager.Instance.AddTileToMap(newTile);;
+            LevelManager.Instance.AddTileToMap(newTile);
         }
     }
 }
