@@ -7,7 +7,7 @@ namespace HexGrids
     /// <summary>
     /// This is the data structure that represents a hex. This holds information about where the hex is in the grid.
     /// </summary>
-    public class Hex
+    public class Hex : MonoBehaviour
     {
         private Vector3Int _position = Vector3Int.zero;
         
