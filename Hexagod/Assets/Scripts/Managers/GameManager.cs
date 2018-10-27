@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using HexGrids;
 
 namespace Managers
 {
@@ -8,6 +9,10 @@ namespace Managers
     public class GameManager : MonoBehaviour
     {
         private static GameManager _instance;
+        
+        /// <summary>
+        /// The static reference to the Game Manager. 
+        /// </summary>
         public static GameManager Instance
         {
             get
@@ -19,6 +24,8 @@ namespace Managers
 
                     _instance = newManager.GetComponent<GameManager>();
                 }
+
+                DontDestroyOnLoad(_instance);
 
                 return _instance;
             }
