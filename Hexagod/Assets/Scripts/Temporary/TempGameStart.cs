@@ -21,12 +21,30 @@ namespace Temporary
             Debug.Log("TempGameStart::CreateTiles()");
             Hex newTile = Instantiate(_hexPrefab);
             newTile.Position = Vector3Int.zero;
-
             LevelManager.Instance.AddTileToMap(newTile);
             
             newTile = Instantiate(_hexPrefab);
-            newTile.Position = Vector3Int.zero + new Vector3Int(1, 0, 0);
+            newTile.Position = Vector3Int.zero + HexCoordinates.North;
+            LevelManager.Instance.AddTileToMap(newTile);
             
+            newTile = Instantiate(_hexPrefab);
+            newTile.Position = Vector3Int.zero + HexCoordinates.NorthEast;
+            LevelManager.Instance.AddTileToMap(newTile);
+            
+            newTile = Instantiate(_hexPrefab);
+            newTile.Position = Vector3Int.zero + HexCoordinates.NorthWest;
+            LevelManager.Instance.AddTileToMap(newTile);
+            
+            newTile = Instantiate(_hexPrefab);
+            newTile.Position = Vector3Int.zero + HexCoordinates.South;
+            LevelManager.Instance.AddTileToMap(newTile);
+            
+            newTile = Instantiate(_hexPrefab);
+            newTile.Position = Vector3Int.zero + HexCoordinates.SouthEast;
+            LevelManager.Instance.AddTileToMap(newTile);
+            
+            newTile = Instantiate(_hexPrefab);
+            newTile.Position = Vector3Int.zero + HexCoordinates.SouthWest;
             LevelManager.Instance.AddTileToMap(newTile);
         }
     }
